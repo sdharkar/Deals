@@ -26,12 +26,14 @@ public class DealsUserController {
 	//Get all deals
 	@GetMapping("/user/deal")
 	public List<Deals> getAllDeals() {
+		System.out.println("Get all deals");
 		return dealsUserserv.getAllDeals();
 	}
 	
-	// Get deals by item
+	// Get deals by id
 	@GetMapping("/user/deal/{item}")
 	public Deals getDealByItem(@PathVariable String item) {
+		System.out.println("Get deal");
 		return dealsUserserv.getDealByItem(item);
 	}
 }

@@ -24,38 +24,25 @@ public class DealsAdminService {
 		return dealsRepo.findById(item).get();
 	}
 	
-	// Save deal
-	public void setDeal(Deals deal) {
-		System.out.println(deal);
+	// Add deal
+	public void addDeal(Deals deal) {
 		dealsRepo.save(deal);
-	}
-	
-	//Edit deals
-	public Deals getDealById(String id) {
 		
-		return null;
 	}
 	
-	//Update deals
-		public Deals updateDeal(Deals deal) {
-			List<Deals> deals = dealsRepo.findAll();
-			try {
-				for(Deals d : deals) {
-					if(d.getId() == deal.getId()) {
-						dealsRepo.save(deal);
-					}
-				}
-				return deal;
-			} catch(Exception e) {
-				System.out.println("Deal not Found!!!");
-				return null;
-			}
-		}
-	
+	//Update deal
+	public void updatedeal(String id, Deals deal) {
+		dealsRepo.save(deal);
+			
+	}
+
+
 	// Delete deals by id
 	public void deleteDeal(String id) {
 		dealsRepo.deleteById(id);
 		
 	}
+
+	
 	
 }
