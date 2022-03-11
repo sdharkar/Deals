@@ -65,7 +65,7 @@ public class DealsAdminController {
 	}
 	
 	// delete deal by id
-	@RequestMapping("/delete/{id}")
+	@RequestMapping("/admin/delete/{id}")
 	public String deleteDeal(@PathVariable("id") String id) {
 		System.out.println("Deal is deleteded by Admin");
 		dealsAdminserv.deleteDeal(id);
